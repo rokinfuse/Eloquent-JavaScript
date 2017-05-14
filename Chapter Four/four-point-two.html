@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function reverseArray(array) {
+			var reversedArray = [];
+			for (var i = 0; i < array.length; i++) {
+				reversedArray.unshift(array[i]);
+			}
+			return reversedArray;
+		}
+
+		document.write(reverseArray([1, 2, 3]))
+	</script>
+</body>
+</html>

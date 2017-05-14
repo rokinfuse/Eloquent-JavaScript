@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+	    function range(start, end, step) {
+	        if (step == null) {
+	            step = 1;
+	        }
+
+	        var numbers = [];
+	        // var counter = 0;
+	        for (var i = start; i <= end; i += step) {
+	            numbers.push(i);
+	            // numbers[i] = i;
+	            // counter++;
+	        }
+	        return numbers;
+	    }
+
+	    function sum(numbers) {
+	        var total = 0;
+	        for (var i = 0; i < numbers.length; i++) {
+	            total += numbers[i];
+	            // why didn't this work
+	            // total += numbers.pop();
+	        }
+	        return total;
+	    }
+
+	    document.write(range(1, 10, 2));
+	    document.write(sum(range(1, 10, 2)));
+    </script>
+</body>
+
+</html>

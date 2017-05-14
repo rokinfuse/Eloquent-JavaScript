@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function isEven(n) {
+			if (n == 0)
+			{
+				return "Even";
+			} else if (n == 1) {
+				return "Odd";
+			}
+			return isEven(n-2);
+		}
+		document.write(isEven(11));
+	</script>
+</body>
+</html>

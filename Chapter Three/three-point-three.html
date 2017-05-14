@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function countChar(string, letterToCount) {
+			var count = 0;
+			for (var i = 0; i < string.length; i++) {
+				if (string.charAt(i) == letterToCount) {
+					count++;
+				}
+			}
+			return count;
+		}
+
+		document.write(countChar("HAHAHAHAAA", "A"));
+	</script>
+
+</body>
+</html>

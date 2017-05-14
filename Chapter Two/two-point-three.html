@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		// Take number of rows and columns of the board as input from user
+		var counter = Number(prompt("Enter N in NxN", "asd"));
+
+		// Check is the input is a valid number
+		if(isNaN(counter)) {
+			alert("Please enter a number");
+		}
+
+		var output = "";
+
+		for (var i = 0; i < counter; i++) {
+			for (var j = 0; j < counter; j++) {
+				if ( (i+j) % 2 == 0) {
+					output += "_";
+				} else {
+					output += "#";
+				}
+			}
+			output += "<br/>";
+		}
+
+		document.write(output);
+	</script>
+</body>
+</html>
