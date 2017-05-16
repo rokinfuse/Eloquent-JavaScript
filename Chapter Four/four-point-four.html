@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function deepEqual(a, b) {
+        if (a === b) {
+            return true;
+        }
+
+        if ((typeof a) != "object" || (typeof b) != "object" || a == null || b == null) {
+            return false;
+        }
+
+        var propsInA = 0;
+		var propsInB = 0;
+
+        for (var prop in a) {
+            propsInA++;
+        }
+
+        for (var prop in b) {
+        	propsInB++;
+        }
+
+        if(propsInA != propsInB) {
+        	return false;
+        } else {
+        	return deepEqual(a[prop], b[prop]);
+        }
+    }
+
+    var obj = {here: {is: "an"}, object: 2};
+console.log(deepEqual(obj, obj));
+console.log(deepEqual(obj, {here: 1, object: 2}));
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+    </script>
+</body>
+
+</html>
